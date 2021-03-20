@@ -6,16 +6,19 @@
 
 <ion-content>
 
- 
-    <ion-button >1</ion-button>
-    <ion-button >2</ion-button>
-    <ion-button >3</ion-button>
-    <ion-button >4</ion-button>
-    <ion-button >5</ion-button>
-    <ion-button >6</ion-button>
-    <ion-button >7</ion-button>
-    <ion-button >8</ion-button>
-    <ion-button >9</ion-button>
-    <ion-button >0</ion-button>
+    <ion-item text-end>
+      <ion-label class="value">        
+        {{value}}
+      </ion-label>      
+    </ion-item>
+
+    <div *ngFor="let numGroup of numberGroups" >
+
+      <ion-button *ngFor="let num of numGroup" (click)="onButtonPress(num)" class="calc-button" >{{num}}</ion-button>
+
+    </div>
+
+   
+   
 
 </ion-content>
